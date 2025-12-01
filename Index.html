@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Women's Section</title>
+    <link rel="stylesheet" href="women.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="https://logos-world.net/wp-content/uploads/2023/04/Hello-Kitty-Logo.png" alt="Logo"
+                    class="logo">
+
+            </div>
+
+            <div class="header-right">
+                <div class="cart-container">
+                    <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/all-3/shopping-cart-9xhllmo2cb79djc9j7b5kb.png/shopping-cart-pe974q2wd8bzu5cueg3qr.png"
+                        alt="Cart" class="icon" id="cartIcon">
+                    <div id="cartDropdown" class="cart-dropdown hidden">
+                        <h3>Cart</h3>
+                        <ul id="cartItems"></ul>
+                        <p id="cartTotal">Total: ₱0.00</p>
+                        <button id="buyAllBtn">Buy All</button>
+                    </div>
+                </div>
+                <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG-Picture.png" alt="Profile"
+                    class="icon" id="profileBtn">
+
+                <div id="welcomeContainer">
+                    <span id="welcomeMsg">Welcome, User!</span>
+                </div>
+
+                <div id="profileDropdown" class="hidden">
+                    <button id="profileLogoutBtn">Logout</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+
+            <div id="formContainer">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button id="loginSubmit">Login</button>
+                <p id="switchForm">Don't have an account? <span id="toggleForm">Create one</span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="filterBubble">Filter</div>
+
+
+    <div id="filterPanel" class="hidden">
+        <h2>Filter</h2>
+
+        <h3>Clothing Type</h3>
+        <ul>
+            <li><label><input type="checkbox" value="tops"> Tops</label></li>
+            <li><label><input type="checkbox" value="dresses"> Dresses</label></li>
+            <li><label><input type="checkbox" value="bottoms"> Bottoms</label></li>
+        </ul>
+
+
+        <h3>Color</h3>
+        <ul>
+            <li><label><input type="checkbox" value="red"> Red</label></li>
+            <li><label><input type="checkbox" value="blue"> Blue</label></li>
+            <li><label><input type="checkbox" value="brown"> Brown</label></li>
+            <li><label><input type="checkbox" value="gray"> Gray</label></li>
+            <li><label><input type="checkbox" value="mix"> Mix</label></li>
+        </ul>
+
+
+        <div class="price-filter">
+            <label for="priceRange">Max Price</label>
+            <input type="range" id="priceRange" min="0" max="1000" value="1000">
+            <div>₱ <span id="priceValue">1000</span></div>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <section class="intro">
+
+            <blockquote>
+
+                <h1>Women's Clothing</h1>
+                <p>The Women’s Collection delivers chic designs and effortless elegance for every occasion.</p>
+
+            </blockquote>
+
+        </section>
+    </div>
+
+    <div class="product-gallery">
+
+        <div class="product-card" data-name="Red Dress" data-price="587" data-colors="red" data-type="dresses">
+            <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/591106013_2228870524192076_2605666275670524046_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGkUHvv1G47VjOfUuqx5xhroM7nggpku6WgzueCCmS7pU5ls1IG49KFHMXYn0lYiMMlZExw2sY43YByNwLf2bQL&_nc_ohc=KGq7dXtSNgAQ7kNvwEHH7lj&_nc_oc=AdmZqbPuYykwmT65rMca885wP3sdtTmmd1IMVIj2tWEObLvVsFgPJ9xySi-oLPYaRFTmGFnqLmltVbftbKKOcMl-&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=xvInJ1h6MKexWlAw-z5rYw&oh=00_AfhuQyjHNO6uxtrY9IJrLWxgx5TTfgWWicRHS0yCzXTJ9Q&oe=693207A8"
+                data-images="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/591106013_2228870524192076_2605666275670524046_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGkUHvv1G47VjOfUuqx5xhroM7nggpku6WgzueCCmS7pU5ls1IG49KFHMXYn0lYiMMlZExw2sY43YByNwLf2bQL&_nc_ohc=KGq7dXtSNgAQ7kNvwEHH7lj&_nc_oc=AdmZqbPuYykwmT65rMca885wP3sdtTmmd1IMVIj2tWEObLvVsFgPJ9xySi-oLPYaRFTmGFnqLmltVbftbKKOcMl-&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=3bZQCtaApmR3zHcmC-yJOw&oh=00_AfiLsdMEN4_wXL49OcelJtXo8tx2SSEZFCgUa6LSZdCFdA&oe=693207A8, https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/592600665_2228870637525398_5174372070213428626_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGu8xnWiuhdvoyM7N3S8Kydl86HTAyj5p2XzodMDKPmnZG69ue-g9VZMQRGEH8jpQXq8p3-rG4AS1km0FF8LlEt&_nc_ohc=lH-y7C-NJ3UQ7kNvwEblIKv&_nc_oc=AdkhYcDC2wcFUuc1p_bFd7J_rhyGucP_a11Ecra65lwnrQppTHQvD-3wD5uCNFEIoePibvvNurvSAa9nj_ngj0BV&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=3bZQCtaApmR3zHcmC-yJOw&oh=00_AfhXb0L_1V2iuvpwaFe0YOhdB0tENjCOsvBmU6TK62RCWQ&oe=69321057"
+                alt="Red Dress 1">
+            <h3 class="product-name">Red Mini Dress With White Bow & Pearl Decor</h3>
+            <p class="product-price">₱587</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Red Dress" data-price="705" data-colors="red" data-type="dresses">
+            <img src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/591382998_2228871040858691_7264484583996738553_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEkVjGO7UsJHrOKiEgC9tHuQE5y0onDOX1ATnLSicM5fafQqIQVZ_wFpv5bPg5_NXjT-xTXi9uDIXd-CCYQ6bZc&_nc_ohc=aaR_VC_PKc4Q7kNvwEyMZE9&_nc_oc=AdlnnCEcTZm7KioW7FC3aQ8qny6h-XQTolxUi_-dGcprnFAHscmDqAf3lpM66W9nrC9Y9qwa5s2Wt9jwknUwmt23&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=wFyjYaZNndQ4x9E1AnW8Zw&oh=00_AfjhG7RltVi5Cbca4xhb3xtElsQWbweHnkScMzSZz_BqKg&oe=69321B7A"
+                alt="Red Dress 2">
+            <h3 class="product-name">Red Asymmetrical Neck Bow Tie Cropped Waist Mini Dress</h3>
+            <p class="product-price">₱705</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Red Dress" data-price="590" data-colors="red" data-type="dresses">
+            <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/591702345_2228871504191978_6854037753077186540_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHvWGi4AgukUs7sqi92eFaUJw-n8bj6jl8nD6fxuPqOXzebLFvjuVNbCggtgpiyMZtBHDkenMHKR92SXHDUBTPN&_nc_ohc=GFGEEBAGhmoQ7kNvwFPoRAr&_nc_oc=AdkAqouOD5ckbql9sbpw7jrRoFnhOrPI_xZJOUsidsqeTeXAbOr5lDvVHqpQ3QbfTvIe7_5GjuXWboXTW_CdrrkA&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=uJQ7cXnSv1lH5xfhOayZ0A&oh=00_Afh7-36QufLgLTUPPssaXPlV4kkofpXb-iNVG8tbzd2_3w&oe=69320939"
+                alt="Red Dress 3">
+            <h3 class="product-name">Red Elegant Floral Print 3D Flower Decor Halter Short Dress</h3>
+            <p class="product-price">₱590</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Blue Dress" data-price="562" data-colors="blue" data-type="dresses">
+            <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/591064540_2228872177525244_1401446343224273747_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGlIeXBANL79qNzm1COFh7jBoJA5NeldcQGgkDk16V1xEHli1FKjXoTaNVwI04ANMjbasvsrguP9LALdwaGb5PA&_nc_ohc=oIJKo-6czBIQ7kNvwHTvAyt&_nc_oc=AdnYUlnKX2V7SuOZfV5ud_XNMvERm5C4ji02cgdEefA8Pe1prDUrBj_4NI2QuzQ2B3uIhlO3Lrb4BtBzJLRDvYE3&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=8u4B0cqd30ltZfzaVqRadg&oh=00_AfiMZ3_zVH8R8EN5f93U5ZS-9sOkKz9mqsT3jOx1dFHLdQ&oe=693206FB"
+                alt="Blue Dress 1">
+            <h3 class="product-name">Blue Cute Off-Shoulder Butterfly-Tie A-Line Mini Dress</h3>
+            <p class="product-price">₱562</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Blue Dress" data-price="628" data-colors="blue" data-type="dresses">
+            <img src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/591051899_2228872707525191_5201971948480128613_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEmG5q8cg_gldn_OBwflR6t_THrbkxwyR_9MetuTHDJHwhNehk0x7w-lL2w-knrNAa4U83AKupclDPLb7oQj0qG&_nc_ohc=_I8t7_ISlIMQ7kNvwH143iN&_nc_oc=AdlugtW15TZrFGM8R8DteIYg46Roxlw2k-rXzNJdVbkVsbQKsTBfwuY0mBhTCQokr0CtvEZcMfgOkabccu_KHsKs&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=pptzOQjqDt-0zYmU-wrzTw&oh=00_AfiBVqacrZmWsc33do9QCilM8TytnUejVrHKftKMuaBbmg&oe=6932101D"
+                alt="Blue Dress 2">
+            <h3 class="product-name">Vintage Lace Floral Print Blue Dress</h3>
+            <p class="product-price">₱628</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="BLue Dress" data-price="744" data-colors="blue" data-type="dresses">
+            <img src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/591089113_2228874960858299_5987195033629058094_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEiliHc5KJM58M3AdF90w-6ng_4ybs_7tGeD_jJuz_u0Y5kSiOT_VDWyWl1WvuYye8ja0aeZCkV9pi5B_8d5YSq&_nc_ohc=mtOzS9ytEeIQ7kNvwFdPEg5&_nc_oc=Adl9MPB2j1GSS_2ka0OrMez3wS8pUbgyBgtivYNOED33juSmBs58DsV1fKAdy1XMm9FFHAPia6_o05ahuNdzgwJ2&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=Ch-fo8viYE6tSLNNRvEvKA&oh=00_Afi1CkbuUrkeGb4S545EVuMnreEfedGMaKEWI9LdT-rp5A&oe=6931FE6D"
+                alt="Blue Dress 3">
+            <h3 class="product-name">Blue Vintage Romantic Asymmetrical Collar 3D Rose Mini Tube Dress</h3>
+            <p class="product-price">₱744</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- tops -->
+        <div class="product-card" data-name="Blue top" data-price="204" data-colors="blue" data-type="tops">
+            <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/592481286_2228875777524884_2965659624864384785_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zZF6H6kFB1UQ7kNvwFyBhuf&_nc_oc=AdnB7b_HyAevRkUs5_q6UbKFZReg1gsI39QemfzuWOlhmaqKiSR2Qn25g4DZH-K_CTIi77opqTQsxFgBRjgDHoK3&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=GNh_PdRGS1vkGiOlBF85Tw&oh=00_AfhqW5fP4dyFebFUcFRb0AXecnKATvSN43bHgBoGoAk5PQ&oe=69328482"
+                alt="top1">
+            <h3 class="product-name">Casual/Vacation Sleeveless Oblique Shoulder Lace Ruffled Tank Top</h3>
+            <p class="product-price">₱204</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Brown top" data-price="322" data-colors="brown" data-type="tops">
+            <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/591195917_2228876380858157_1801383286377886733_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F49GaL8KAH0Q7kNvwGFD8CM&_nc_oc=AdkpHA5tXZpt8g1KY_xNGFKoHhVOZvF_TPmNobDAdM1uiEMAR9Hd2Kw2i35UNSLOnUbflpT3wuPDEyTqreUqZesw&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=E6KVFqHz8q1uS57_T2DreA&oh=00_Afgl40W0fon8GkLWLMgDTmVkai4dtUQenfWJeTQFmVkdaA&oe=693269C8"
+                alt="top2">
+            <h3 class="product-name"> Y2K Style Leopard Print Backless Halter Top</h3>
+            <p class="product-price">₱322</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-name="Green top" data-price="399" data-colors="mix" data-type="tops">
+            <img src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/592482470_2228877174191411_7639774954359940968_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NaqLHYk0pCgQ7kNvwEq4fiv&_nc_oc=AdkR_O8shuEHCCLC0taK2KjKIeKhu6ThhyxvwYTE3dv-xPByU_OiuCeirCuU7RY1bOsatF_ucz2f8P3DVn1j3qG8&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=VzhD33S988MvBe_gdcdK6g&oh=00_Afhc4dIxP6jhr4HfP0Pdlqgvw6Sj3sdRFIM4Ft73-QUGfw&oe=69328FED"
+                alt="top3">
+            <h3 class="product-name">Green Flower Print Camisole Mesh Tank Top</h3>
+            <p class="product-price">₱399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Red top" data-price="227" data-colors="red" data-type="tops">
+            <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/592528109_2228876890858106_4562413418688986406_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9537RelmVnQQ7kNvwHZxu7g&_nc_oc=AdkA-WGS6W2zEhhiKd55Htm0tWtAAU8_kexGISOJkJ9puL9MRdSu2LSWDpoMNOzzpxBrSqUac0kV93a1BnDXATHi&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=NHI7IM_hfgsd0eGjQwi2IQ&oh=00_AfhuCZYNXcFDgs7vGjVlieUDAQFsaIIzGMdGqvyyMHjeJA&oe=693270FD"
+                alt="top4">
+            <h3 class="product-name">Print Mesh Women Tank Top With Neckline And Backless Design,Vintage Grunge Punk
+            </h3>
+            <p class="product-price">₱227</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- pants -->
+        <div class="product-card" data-name="Bottom1" data-price="973" data-colors="blue" data-type="bottoms">
+            <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/591540851_2228877787524683_8831991780131584839_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_39SbzX6TQ4Q7kNvwEq4eGm&_nc_oc=AdnD5bmSQdCEBvmAYcGfEzNJ4mysJvd9bOFUFH-09xU1OfI9Zl6Hm1GvM1QPVN5Y4RmK2uMpun_EazALgpzgY1wC&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=j7aXvDVlduuMY9DKhiDV6w&oh=00_AfgcHZ5au_0nn9ouor47cgfR-JT7Ue_aMTNUIkPfw0WzTA&oe=6932786D"
+                alt="bottom1">
+            <h3 class="product-name"> Casual Pocketed Denim Flared Pants Low Rise Jeans</h3>
+            <p class="product-price">₱973</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Bottom2" data-price="624" data-colors="gray" data-type="bottoms">
+            <img src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/591071568_2228878137524648_1611338401216382617_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dijmZZmBb70Q7kNvwE_pV2U&_nc_oc=Adn6FFOs-YX5sMmFbLnS_PJuBw5pEXFTRLC1wd44CNNVUP6rbFK7PLx4AWHvUhpmWff2byM_PmSTDnK8KuSgXbJF&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=KnCbUnH5StH1ZeJUC611fA&oh=00_AfjAfCgPw6ALGEfDNTiMKfusMqOKjWgiNY4e5kyEvWUUYQ&oe=6932797C"
+                alt="bottom2">
+            <h3 class="product-name">Casual Solid Wide Leg Pants,Women Dress Pants</h3>
+            <p class="product-price">₱624</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Bottom3" data-price="596" data-colors="gray" data-type="bottoms">
+            <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/592896270_2228878640857931_3524005736621096799_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mgf9Sm2hBYAQ7kNvwHW8Vv5&_nc_oc=AdkBwdZTCUJ3gQ17IIFoRE2ZCSOd7HPd6cnR63LYRPdkADOJFYh_1PshhwwOTfZdWEm3VmA_mIFw3y1SstAsCho-&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=jkYf_o-jrOp3ATNpSVlFGQ&oh=00_AfjWe1D5njzoJ-4z8Pc1wwfkYuYhC6aCm96FPVfuo-GP2g&oe=69327392"
+                alt="bottom3">
+            <h3 class="product-name">Solid Color Slim Straight Double Layered Design Women's Trousers</h3>
+            <p class="product-price">₱596</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Bottom4" data-price="731" data-colors="mix" data-type="bottoms">
+            <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/591074860_2228879077524554_8591078018083197495_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=L8mM90RmDvoQ7kNvwEtppJU&_nc_oc=Adlmhdlm9KBrsCTvk8GnINujH4sf6b71FVQlFfPLBmlur_fYp1cCakj3_wCcIUBf8VPFAP_M_bKJ1MQzUXKx035U&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=TUxiJiCcW70ov8bMEoHkmA&oh=00_Afj2Duxd4oUMWt--IYVWWE7bnfjtz8iHWu3S_qx2gFilxw&oe=693283F1"
+                alt="bottom4">
+            <h3 class="product-name">Contrast Color Lace Patchwork Asymmetrical Hem Skirt</h3>
+            <p class="product-price">₱731</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div id="productDetail" class="hidden">
+        <button id="backToGallery">← Back</button>
+        <div class="product-detail-container">
+            <div class="product-images">
+                <img id="mainImage" src="" alt="Product Image">
+                <div class="thumbnails"></div>
+            </div>
+            <div class="product-info">
+                <h1 id="detailName" class="product-name"></h1>
+                <p id="detailPrice" class="product-price"></p>
+                <div id="detailColors" class="color-options"></div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
+                <div class="product-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="Reviews" class="Reviews">
+
+        <h2>Reviews</h2>
+
+        <blockquote>
+
+            ★★★★★ <br>
+
+            “I absolutely love the dresses from this shop! The quality is excellent, the fit is perfect, and the designs
+            are so stylish. Shipping was fast and the packaging was cute. Highly recommend!”
+
+            <br>– Ma. Ahticco Manalo
+
+        </blockquote>
+
+        <blockquote>
+
+            ★★★★★ <br>
+
+            “The dresses I ordered are even prettier in person! The fabric feels great, and the colors are exactly like
+            the pictures. I’m really happy with my purchase and will definitely shop here again.”
+
+            <br>– Catrianna Gray
+
+        </blockquote>
+
+        <blockquote>
+
+            ★★★★★ <br>
+
+            “Absolutely love this shop! The dresses fit perfectly and the quality is excellent. Shipping was fast too.
+            Highly recommend!”
+
+            <br>– Pia Wheresherback
+
+        </blockquote>
+
+    </section>
+
+
+    <footer id="Contacts">
+
+        <p>Contact us at <strong>Pallete Hous.</strong></p>
+
+        <p>© 2025 CKM Hut. All rights reserved.</p>
+
+    </footer>
+
+
+    <script src="women.js"></script>
+</body>
+
+</html>
